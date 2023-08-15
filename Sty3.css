@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: rgb(242, 228, 228);
+  }
+  
+  .box{
+    height: 28rem;
+    width: 25rem;
+    border: 1.5px solid white;
+    margin-top: 2rem;
+    margin-left: 24.5rem;
+   box-shadow: 10px 15px 30px black;
+   background: white;
+
+  }
+ 
+  #inputText{
+
+    height: 2rem;
+    width: 13rem;
+    text-align: center;
+  }
+
+  #bt{
+    height: 2.5rem;
+    width: 11rem;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-color: blue;
+ }
+
+  #qrCodeContainer{
+    margin-left: 8.5rem;
+  }
+
+  #downloadLink{
+    border: 1px solid black;
+    height: 1.8rem;
+    width: 11rem;
+    margin-left: 7rem;
+    text-decoration: none;
+    padding-top: 8px;
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    
+}
+
+ 

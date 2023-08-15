@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generate</title>
+    <link rel="stylesheet" href="Sty3.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>QR Code Generator</h1>
+      <label for="inputText"></label>
+      <input type="text" id="inputText" placeholder="Enter message or URL" />
+      <br /><br />
+      <button id="bt" onclick="generateQRCode()">Generate QR Code</button>
+      <br /><br /><br />
+
+      <div id="qrCodeContainer"></div>
+      <br /><br />
+      <a id="downloadLink" style="display: none">Download QR Code</a>
+    </div>
+  </body>
+
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script>
+    function generateQRCode() {
+      const inputText = document.getElementById("inputText").value;
+      const qrCodeContainer = document.getElementById("qrCodeContainer");
+      const downloadLink = document.getElementById("downloadLink");
+
+      qrCodeContainer.innerHTML = "";
+
+      const qrcode = new QRCode(qrCodeContainer, {
+        text: inputText,
+        width: 128,
+        height: 128,
+      });
+
+      downloadLink.href = qrCodeContainer.children[0].toDataURL("image/png");
+      downloadLink.download = "qrcode.png";
+      downloadLink.style.display = "block";
+    }
+  </script>
+</html>
